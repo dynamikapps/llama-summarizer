@@ -1,0 +1,59 @@
+# Environment variables
+.env
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+.virtualenv/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Test files
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Generated summaries and test files
+*_summary.md
+summary.md
+*_sample_document.html
+*_sample_document.pdf
+*_sample_document.docx
+*_sample_document.doc
+*_sample_document.txt
+*_sample_document.md
+sample_document.html
+sample_document.pdf
+sample_document.docx
+sample_document.doc
+sample_document.txt
+sample_document.md
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# mypy
+.mypy_cache/
+
+# Other
+*.log
+*.tmp 
