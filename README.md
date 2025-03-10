@@ -12,6 +12,7 @@ A Python utility for summarizing large text, markdown, PDF, and Word documents u
 - Uses smart chunking with overlapping sections to ensure no information is lost
 - Produces a comprehensive final summary that stays within the model's limits
 - Automatically detects file formats based on extension
+- Available as both command-line tool and web interface
 
 ## Prerequisites
 
@@ -43,7 +44,7 @@ A Python utility for summarizing large text, markdown, PDF, and Word documents u
 
 4. Make the shell scripts executable:
    ```
-   chmod +x run_summarizer.sh test_all_formats.sh
+   chmod +x run_summarizer.sh test_all_formats.sh run_streamlit.sh
    ```
 
 ## Quick Start
@@ -59,6 +60,27 @@ Or use the convenience script:
 ```bash
 ./run_summarizer.sh your_file.pdf
 ```
+
+### Web Interface (Streamlit)
+
+For a user-friendly web interface, run:
+
+```bash
+streamlit run streamlit_app.py
+```
+
+Or use the convenience script:
+
+```bash
+./run_streamlit.sh
+```
+
+This launches a web app where you can:
+
+- Upload documents in various formats
+- Customize summarization parameters
+- View progress in real-time
+- Download the generated summary
 
 ## Usage
 
@@ -106,6 +128,45 @@ While our script uses tiktoken to count tokens automatically, you can also check
 - [OpenAI Tokenizer Tool](https://platform.openai.com/tokenizer)
 
 This can be helpful to estimate how many chunks your document will be divided into before running the summarization process.
+
+## Streamlit Web Interface
+
+The project includes a web-based interface built with Streamlit that provides a user-friendly way to use the summarizer.
+
+### Features of the Web Interface
+
+- **Interactive Document Upload**: Drag and drop your documents
+- **Real-time Progress Tracking**: Watch as each chunk is processed
+- **Adjustable Parameters**: Use sliders to fine-tune your summary
+- **Document Analysis**: View token count and estimated processing chunks
+- **Summary Statistics**: See compression ratio and processing time
+- **Downloadable Results**: Save your summary with one click
+
+### Using the Web Interface
+
+1. Start the web interface:
+
+   ```bash
+   streamlit run streamlit_app.py
+   ```
+
+2. Open your browser at http://localhost:8501
+
+3. Upload a document by dragging and dropping or clicking the upload area
+
+4. Adjust summarization parameters in the sidebar if needed:
+
+   - Maximum tokens for summary length
+   - Chunk size for processing
+   - Overlap between chunks
+
+5. Click "Generate Summary" to begin processing
+
+6. Review the summary and download it as needed
+
+### Screenshots
+
+![Streamlit Interface](https://github.com/yourusername/llama_summarizer/raw/main/docs/streamlit_screenshot.png)
 
 ## How It Works
 
